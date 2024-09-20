@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/resetCss.css" />
+    <link rel="stylesheet" href="./assets/css/thu-vien.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/root.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/font/themify-icons/themify-icons.css"
+    />
+    <link
+      href="./assets/font/fontawesome-free-6.5.2-web/css/fontawesome.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./assets/font/fontawesome-free-6.5.2-web/css/brands.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./assets/font/fontawesome-free-6.5.2-web/css/solid.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/music.js"></script>
+    <title>Thư viện ZM3</title>
+  </head>
+  <body>
+    
+    <div class="content-main">
+      
+      <div class="content-overview">
+        <div class="header-view title">#zingchart Clone</div>
+        <div class="zm-chart-container"></div>
+      </div>
+
+      <div class="content-overview">
+        <div class="table table-zmChart table-sort">
+          <table>
+            <tbody id="table-chart-music">
+              <tr class="hidden">
+                <td class="header-table">
+                  <div class="number width-number is-top-2">
+                    <span>1</span>
+                  </div>
+                </td>
+                <td class="col-sort-table">
+                  <div class="sort hidden"></div>
+                  <div class="icon-sort">
+                    <i class="fa-solid fa-caret-up green"></i>
+                    <span>2</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="block">
+                    <div class="img-music">
+                      <img
+                        class="img-music-view"
+                        src="./assets/img/img-user.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="content">
+                      <div
+                        class="title__content"
+                        onclick="window.parent.playAudio"
+                      >
+                        Rời Bỏ
+                      </div>
+                      <div class="desc__content">
+                        Hòa Minzi
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td><div class="album-info">Rời Bỏ (Single)</div></td>
+                <td>
+                  <div class="time-info">
+                    <div class="icon-btn plane hidden">
+                      <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                    <div class="icon-btn microphone hidden">
+                      <i class="fa-solid fa-microphone"></i>
+                    </div>
+                    <div class="icon-btn">
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="time">04:37</div>
+                    <div class="icon-btn ellipsis hidden">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="btn-btn-more">
+            <div class="zm-btn">Xem top 100</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="content-overview xh-week">
+        <div class="bg-blur"></div>
+        <div class="bg-alpha"></div>
+        <div class="header-view title-xh">Bảng Xếp Hạng Tuần</div>
+        <div class="container-block">
+          <div class="col-flex">
+            <div class="header">
+              <div class="title title-xh">Việt Nam</div>
+              <div class="icon"></div>
+            </div>
+            <div class="table table-sort table-xh ">
+              <table>
+                <tbody id="table-xh-weeb-box1">
+                  <tr class="hidden">
+                    <td class="header-table">
+                      <div class="number width-number is-top-2">
+                        <span>1</span>
+                      </div>
+                    </td>
+                    <td class="col-sort-table">
+                      <div class="sort hidden"></div>
+                      <div class="icon-sort">
+                        <i class="fa-solid fa-caret-up green"></i>
+                        <span>2</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="block">
+                        <div class="img-music">
+                          <img
+                            class="img-music-view"
+                            src="./assets/img/img-user.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="content">
+                          <div
+                            class="title__content line-clamp"
+                            onclick="window.parent.playAudio"
+                          >
+                            Rời Bỏ 
+                          </div>
+                          <div class="desc__content line-clamp">
+                            Hòa Minzi
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    
+                    <td>
+                      <div class="time-info">
+                        <div class="icon-btn plane hidden">
+                          <i class="fa-regular fa-paper-plane"></i>
+                        </div>
+                        <div class="icon-btn microphone hidden">
+                          <i class="fa-solid fa-microphone"></i>
+                        </div>
+                        <div class="icon-btn">
+                          <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="time">04:37</div>
+                        <div class="icon-btn ellipsis hidden">
+                          <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="btn-btn-more">
+                <div class="zm-btn">Xem tất cả</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-flex">
+            <div class="header">
+              <div class="title title-xh">Việt Nam</div>
+              <div class="icon"></div>
+            </div>
+            <div class="table table-sort table-xh ">
+              <table>
+                <tbody id="table-xh-weeb-box2">
+                  <tr class="hidden">
+                    <td class="header-table">
+                      <div class="number width-number is-top-2">
+                        <span>1</span>
+                      </div>
+                    </td>
+                    <td class="col-sort-table">
+                      <div class="sort hidden"></div>
+                      <div class="icon-sort">
+                        <i class="fa-solid fa-caret-up green"></i>
+                        <span>2</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="block">
+                        <div class="img-music">
+                          <img
+                            class="img-music-view"
+                            src="./assets/img/img-user.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="content">
+                          <div
+                            class="title__content line-clamp"
+                            onclick="window.parent.playAudio"
+                          >
+                            Rời Bỏ 
+                          </div>
+                          <div class="desc__content line-clamp">
+                            Hòa Minzi
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    
+                    <td>
+                      <div class="time-info">
+                  
+                        <div class="icon-btn microphone hidden">
+                          <i class="fa-solid fa-microphone"></i>
+                        </div>
+             
+                        <div class="time">04:37</div>
+                        <div class="icon-btn ellipsis hidden">
+                          <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="btn-btn-more">
+                <div class="zm-btn">Xem tất cả</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-flex">
+            <div class="header">
+              <div class="title title-xh">Việt Nam</div>
+              <div class="icon"></div>
+            </div>
+            <div class="table table-sort table-xh ">
+              <table>
+                <tbody id="table-xh-weeb-box3">
+                  <tr class="hidden">
+                    <td class="header-table">
+                      <div class="number width-number">
+                        <span>1</span>
+                      </div>
+                    </td>
+                    <td class="col-sort-table">
+                      <div class="sort hidden"></div>
+                      <div class="icon-sort">
+                        <i class="fa-solid fa-caret-up green"></i>
+                        <span>2</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="block">
+                        <div class="img-music">
+                          <img
+                            class="img-music-view"
+                            src="./assets/img/img-user.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="content">
+                          <div
+                            class="title__content line-clamp"
+                            onclick="window.parent.playAudio"
+                          >
+                            Rời Bỏ Rời Bỏ Rời Bỏ Rời Bỏ Rời Bỏ Rời Bỏ Rời Bỏ 
+                          </div>
+                          <div class="desc__content line-clamp">
+                            Hòa Minzi
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    
+                    <td>
+                      <div class="time-info">
+                        <div class="icon-btn microphone hidden">
+                          <i class="fa-solid fa-microphone"></i>
+                        </div>
+                        <div class="time">04:37</div>
+                        <div class="icon-btn ellipsis hidden">
+                          <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="btn-btn-more">
+                <div class="zm-btn">Xem tất cả</div>
+              </div>
+            </div>
+          </div>
+         
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

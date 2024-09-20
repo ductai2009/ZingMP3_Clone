@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/resetCss.css" />
+
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/root.css" />
+    <link rel="stylesheet" href="./assets/css/thu-vien.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/font/themify-icons/themify-icons.css"
+    />
+    <link
+      href="./assets/font/fontawesome-free-6.5.2-web/css/fontawesome.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./assets/font/fontawesome-free-6.5.2-web/css/brands.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./assets/font/fontawesome-free-6.5.2-web/css/solid.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/music.js"></script>
+    <title>Iframe khám phá</title>
+  </head>
+  <body>
+    <div class="content-main">
+      <!-- <div class="tooltip"></div> -->
+      <div class="content-overview">
+        <div class="header-view">Phám phá</div>
+
+        <div class="container">
+          <div class="slider flex-center">
+            <div class="slide_box">
+              <img src="./assets/img/slider1.jpg" alt="" class="img" />
+            </div>
+
+            <div class="slide_box">
+              <img src="./assets/img/slider2.jpg" alt="" class="img" />
+            </div>
+
+            <div class="slide_box">
+              <img src="./assets/img/slider3.jpg" alt="" class="img" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-overview">
+        <div class="header kham-pha">
+          <div class="title">Nghe gần đây</div>
+          <div class="action hidden"><span>Tất cả</span></div>
+        </div>
+        <div class="container kham-pha">
+          <div class="block">
+            <div class="img-block block-relative box btn-playList">
+              <img class="img" src="./assets/img/zingchart.jpg" alt="" />
+
+              <div class="block-absolute">
+                <div
+                  class="icon icon-btn icon-hover tooltip-hv"
+                  data-tooltip="Thêm vào thư viện"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="icon icon-btn icon-play-box">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+
+                <div class="icon-btn icon-hover tooltip-hv" data-tooltip="Khác">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="title-block">#zingchart</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-overview">
+        <div class="header kham-pha">
+          <div class="title">Mới phát hành</div>
+          <div class="action">
+            <div class="action-btn uppercase">
+              <div class="hover-target">
+                <a
+                  class="zm-btn hover-kp hover-tooltip btn-all active"
+                  href="#!"
+                  >Tất cả</a
+                >
+              </div>
+
+              <a class="zm-btn hover-kp btn-vn" id="add-row-btn" href="#!"
+                >Việt nam</a
+              >
+              <a class="zm-btn hover-kp btn-qt active" href="#!">Quốc tế</a>
+            </div>
+            <span>Tất cả</span>
+          </div>
+        </div>
+        <div class="container kham-pha">
+          <div class="table-col3">
+            <table>
+              <tbody id="table-col3_phamPha">
+                <tr class="hidden">
+                  <td class="tbl-col">
+                    <div class="block">
+                      <div class="img-music box-abs">
+                        <div class="block-relative box-img-bl">
+                          <img
+                            class="img-music-view"
+                            src="./assets/img/img-user.jpg"
+                            alt=""
+                          />
+                          <div
+                            class="block-absolute absolute-center first-absolute"
+                          >
+                            <div class="icon-btn">
+                              <i class="fa-regular fa-heart opacity-hover"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="content">
+                        <div
+                          class="title__content"
+                          onclick="window.parent.playAudio"
+                        >
+                          Rời Bỏ 3 3
+                          <div class="tag-img"></div>
+                        </div>
+                        <div class="desc__content hv-underline">
+                          <div class="hover-targetf">
+                            <div
+                              class="line-clamp hover-tooltip desc-opacity"
+                              data-tooltip="xin chao"
+                            >
+                              Hòa Minzi <i class="fa-solid fa-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="desc__content time hv-default">
+                          4 giờ trước
+                        </div>
+                      </div>
+                      <div class="icon-btn icon-hover">
+                        <i class="fa-solid fa-ellipsis opacity-hover"></i>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td class="tbl-col box-abs">
+                    <div class="block">
+                      <div class="img-music">
+                        <div class="block-relative box-img-bl">
+                          <img
+                            class="img-music-view"
+                            src="./assets/img/img-user.jpg"
+                            alt=""
+                          />
+                          <div
+                            class="block-absolute absolute-center first-absolute"
+                          >
+                            <div class="icon-btn">
+                              <i class="fa-regular fa-heart opacity-hover"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="content">
+                        <div
+                          class="title__content"
+                          onclick="window.parent.playAudio"
+                        >
+                          Rời Bỏ 3 3
+                          <div class="tag-img"></div>
+                        </div>
+                        <div class="desc__content hv-underline">
+                          <div class="hover-targetf">
+                            <div
+                              class="line-clamp hover-tooltip desc-opacity"
+                              data-tooltip="xin chao"
+                            >
+                              Hòa Minzi <i class="fa-solid fa-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="desc__content time hv-default">
+                          4 giờ trước
+                        </div>
+                      </div>
+                      <div class="icon-btn icon-hover">
+                        <i class="fa-solid fa-ellipsis opacity-hover"></i>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td class="tbl-col box-abs">
+                    <div class="block">
+                      <div class="img-music">
+                        <div class="block-relative box-img-bl">
+                          <img
+                            class="img-music-view"
+                            src="./assets/img/img-user.jpg"
+                            alt=""
+                          />
+                          <div
+                            class="block-absolute absolute-center first-absolute"
+                          >
+                            <div class="icon-btn">
+                              <i class="fa-regular fa-heart opacity-hover"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="content">
+                        <div
+                          class="title__content"
+                          onclick="window.parent.playAudio"
+                        >
+                          Rời Bỏ 3 3
+                          <div class="tag-img"></div>
+                        </div>
+                        <div class="desc__content hv-underline">
+                          <div class="hover-target">
+                            <div
+                              class="line-clamp hover-tooltip desc-opacity"
+                              data-tooltip="xin chao"
+                            >
+                              Hòa Minzi <i class="fa-solid fa-star"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="desc__content time hv-default">
+                          4 giờ trước
+                        </div>
+                      </div>
+                      <div class="icon-btn icon-hover">
+                        <i class="fa-solid fa-ellipsis opacity-hover"></i>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-overview">
+        <div class="header kham-pha">
+          <div class="title">Tâm Trạng Tan Chậm</div>
+        </div>
+        <div class="container gap">
+          <div class="block">
+            <div class="img-block block-relative box btn-playList">
+              <img
+                class="img"
+                src="./assets/img/playlist-tamtrang.jpg"
+                alt=""
+              />
+
+              <div class="block-absolute">
+                <div
+                  class="icon icon-btn icon-hover tooltip-hv"
+                  data-tooltip="Thêm vào thư viện"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="icon icon-btn icon-play-box">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+
+                <div class="icon-btn icon-hover tooltip-hv" data-tooltip="Khác">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="sub__title">
+              Có những ngày, mình đã ngồi suy nghĩ rất lâu về những gì
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="img-block block-relative box btn-playList">
+              <img
+                class="img"
+                src="./assets/img/playlist-tamtrang-nhacbuon.jpg"
+                alt=""
+              />
+
+              <div class="block-absolute">
+                <div
+                  class="icon icon-btn icon-hover tooltip-hv"
+                  data-tooltip="Thêm vào thư viện"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="icon icon-btn icon-play-box">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+
+                <div class="icon-btn icon-hover tooltip-hv" data-tooltip="Khác">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="sub__title">
+              Một mình nghêu ngao những câu hát indie buồn tênh
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="img-block block-relative box btn-playList">
+              <img
+                class="img"
+                src="./assets/img/playlist-tamtrang-tancham.jpg"
+                alt=""
+              />
+
+              <div class="block-absolute">
+                <div
+                  class="icon icon-btn icon-hover tooltip-hv"
+                  data-tooltip="Thêm vào thư viện"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="icon icon-btn icon-play-box">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+
+                <div class="icon-btn icon-hover tooltip-hv" data-tooltip="Khác">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="sub__title">
+              Đóng băng thời gian, tan chầm chậm theo những cảm xúc
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="img-block block-relative box btn-playList">
+              <img
+                class="img"
+                src="./assets/img/playlist-tamtinh-lauphai.jpg"
+                alt=""
+              />
+
+              <div class="block-absolute">
+                <div
+                  class="icon icon-btn icon-hover tooltip-hv"
+                  data-tooltip="Thêm vào thư viện"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="icon icon-btn icon-play-box">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+
+                <div class="icon-btn icon-hover tooltip-hv" data-tooltip="Khác">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="sub__title">
+              Chút tâm tình này xin phép được lâu phai
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="img-block block-relative box btn-playList">
+              <img
+                class="img"
+                src="./assets/img/playlist-rongruoi.jpg"
+                alt=""
+              />
+
+              <div class="block-absolute">
+                <div
+                  class="icon icon-btn icon-hover tooltip-hv"
+                  data-tooltip="Thêm vào thư viện"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="icon icon-btn icon-play-box">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+
+                <div class="icon-btn icon-hover tooltip-hv" data-tooltip="Khác">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="sub__title">
+              Rong ruổi khắp đất trời bằng những giai điệu êm ả
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-overview">
+        <div class="header">
+          <div class="title title_medium">Chill</div>
+          <div class="action"><span>Tất cả</span></div>
+        </div>
+        <div class="container gap">
+          <div class="block">
+            <div class="img-block block-relative box btn-playList">
+              <img class="img" src="./assets/img/playlist-chill.jpg" alt="" />
+
+              <div class="block-absolute">
+                <div
+                  class="icon icon-btn icon-hover tooltip-hv"
+                  data-tooltip="Thêm vào thư viện"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="icon icon-btn icon-play-box">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+
+                <div class="icon-btn icon-hover tooltip-hv" data-tooltip="Khác">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="sub__title">
+              Alo alo đây là tổng đài nhạc chill, chúc bạn có một buổi tối thư
+              giãn
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="img-block block-relative box btn-playList">
+              <img class="img" src="./assets/img/playlist-chill2.jpg" alt="" />
+
+              <div class="block-absolute">
+                <div
+                  class="icon icon-btn icon-hover tooltip-hv"
+                  data-tooltip="Thêm vào thư viện"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="icon icon-btn icon-play-box">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+
+                <div class="icon-btn icon-hover tooltip-hv" data-tooltip="Khác">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="sub__title">
+              Va vào những giai điệu thư giãn của V-Pop
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="img-block block-relative box btn-playList">
+              <img
+                class="img"
+                src="./assets/img/playlist-chilltuday.jpg"
+                alt=""
+              />
+
+              <div class="block-absolute">
+                <div
+                  class="icon icon-btn icon-hover tooltip-hv"
+                  data-tooltip="Thêm vào thư viện"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="icon icon-btn icon-play-box">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+
+                <div class="icon-btn icon-hover tooltip-hv" data-tooltip="Khác">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="sub__title">
+              Một list nhạc Indie mang lại cảm giác bình yên cho bạn
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="img-block block-relative box btn-playList">
+              <img class="img" src="./assets/img/playlist-lofihit.jpg" alt="" />
+
+              <div class="block-absolute">
+                <div
+                  class="icon icon-btn icon-hover tooltip-hv"
+                  data-tooltip="Thêm vào thư viện"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="icon icon-btn icon-play-box">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+
+                <div class="icon-btn icon-hover tooltip-hv" data-tooltip="Khác">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="sub__title">
+              Thư giãn với những âm thanh Lofi thân thuộc
+            </div>
+          </div>
+          <div class="block">
+            <div class="img-block block-relative box btn-playList">
+              <img
+                class="img"
+                src="./assets/img/playlis-lofi-khongchiu.jpg"
+                alt=""
+              />
+
+              <div class="block-absolute">
+                <div
+                  class="icon icon-btn icon-hover tooltip-hv"
+                  data-tooltip="Thêm vào thư viện"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="icon icon-btn icon-play-box">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+
+                <div class="icon-btn icon-hover tooltip-hv" data-tooltip="Khác">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="sub__title">
+              Ngày nào cũng phải mở playlist này để chill mới chịu
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-overview">
+        <div class="zm-chart-container rt-chart-home">
+          <div class="bg-blur"></div>
+          <div class="bg-alpha"></div>
+          <div class="section">
+            <div class="section-header"><a href="#"> #zingchart Clone </a></div>
+            <div class="section-main">
+              <div class="section-main__left">
+                <ul class="list list-zingchart" id="list-zingchart-bxh">
+                  <li class="item hidden">
+                    <div class="box__one">
+                      <div class="box_one_left number width-number is-top-1">
+                        1
+                      </div>
+                      <div class="box_one_right">
+                        <div class="box__two">
+                          <div class="box__content">
+                            <div class="img-music box-abs">
+                              <div class="block-relative box-img-bl">
+                                <img
+                                  class="img-music-view"
+                                  src="./assets/img/img-user.jpg"
+                                  alt=""
+                                />
+                                <div
+                                  class="block-absolute absolute-center first-absolute"
+                                >
+                                  <div class="icon-btn">
+                                    <i
+                                      class="fa-regular fa-heart opacity-hover"
+                                    ></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="box__text">
+                              <div class="box__text__title">
+                                Vừa hận vừa yêu
+                              </div>
+                              <div class="box__text__subtitle">Tác giả</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="box__three">
+                      <span>42%</span>
+                    </div>
+                  </li>
+
+                  <li class="item hidden">
+                    <div class="box__one">
+                      <div class="box_one_left number width-number is-top-2">
+                        2
+                      </div>
+                      <div class="box_one_right">
+                        <div class="box__two">
+                          <div class="box__content">
+                            <div class="img-music box-abs">
+                              <div class="block-relative box-img-bl">
+                                <img
+                                  class="img-music-view"
+                                  src="./assets/img/img-user.jpg"
+                                  alt=""
+                                />
+                                <div
+                                  class="block-absolute absolute-center first-absolute"
+                                >
+                                  <div class="icon-btn">
+                                    <i
+                                      class="fa-regular fa-heart opacity-hover"
+                                    ></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="box__text">
+                              <div class="box__text__title">
+                                Vừa hận vừa yêu
+                              </div>
+                              <div class="box__text__subtitle">Tác giả</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="box__three">
+                      <span>42%</span>
+                    </div>
+                  </li>
+
+                  <li class="item hidden">
+                    <div class="box__one">
+                      <div class="box_one_left number width-number is-top-3">
+                        3
+                      </div>
+                      <div class="box_one_right">
+                        <div class="box__two">
+                          <div class="box__content">
+                            <div class="img-music box-abs">
+                              <div class="block-relative box-img-bl">
+                                <img
+                                  class="img-music-view"
+                                  src="./assets/img/img-user.jpg"
+                                  alt=""
+                                />
+                                <div
+                                  class="block-absolute absolute-center first-absolute"
+                                >
+                                  <div class="icon-btn">
+                                    <i
+                                      class="fa-regular fa-heart opacity-hover"
+                                    ></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="box__text">
+                              <div class="box__text__title">
+                                Vừa hận vừa yêu
+                              </div>
+                              <div class="box__text__subtitle">Tác giả</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="box__three">
+                      <span>42%</span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="btn-btn-more btn-rt-chart-home">
+                  <div class="zm-btn">Xem thêm</div>
+                </div>
+              </div>
+
+              <div class="section-main__right">
+                <div class="box-chart"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-overview">
+        <div class="container gap box-rectangle">
+          <div class="block">
+            <div class="img-block block-relative box btn-playList">
+              <img class="img" src="./assets/img/slider-bh-VN.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="img-block block-relative box btn-playList">
+              <img class="img" src="./assets/img/slider-us-uk.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="img-block block-relative box btn-playList">
+              <img class="img" src="./assets/img/slider-k-pop.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-overview">
+        <div class="header">
+          <div class="title title_medium">Radio Nổi Bật</div>
+          <div class="action"><span>Tất cả</span></div>
+        </div>
+
+        <div class="container">
+          <div class="container-view radio-box block-relative">
+            <div class="img-view box">
+              <div class="img-block block-relative btn-playList">
+                <img class="img" src="./assets/img/v-pop-yeu-cau.jpg" alt="" />
+                <div class="block-absolute">
+                  <div class="icon icon-btn icon-play-box">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="image-abs block-absolute">
+                <img
+                  class="img-box"
+                  src="./assets/img/radio-sm-vpop.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="tag block-absolute">
+                <img src="./assets/img/live-tag.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="title flex-center">
+              <div class="desc">V POP</div>
+              <div class="subtitle">454 đang nghe</div>
+            </div>
+          </div>
+
+          <div class="container-view radio-box block-relative">
+            <div class="img-view box">
+              <div class="img-block block-relative btn-playList">
+                <img class="img" src="./assets/img/radio-cham.jpg" alt="" />
+                <div class="block-absolute">
+                  <div class="icon icon-btn icon-play-box">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="image-abs block-absolute">
+                <img
+                  class="img-box"
+                  src="./assets/img/radio-sm-cham.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="tag block-absolute">
+                <img src="./assets/img/live-tag.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="title flex-center">
+              <div class="desc">Chạm</div>
+              <div class="subtitle">32 đang nghe</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-overview">
+        <div class="zm-partner-section">
+          <div class="header_partner">Đối tác âm nhạc</div>
+          <div class="columns_container">
+            <div class="columns">
+              <img src="/assets/DoiTacAmNhac/dtam1.png" alt="" />
+              <img src="/assets/DoiTacAmNhac/dtam9.png" alt="" />
+            </div>
+            <div class="columns">
+              <img src="/assets/DoiTacAmNhac/dtam2.png" alt="" />
+              <img src="/assets/DoiTacAmNhac/dtam10.png" alt="" />
+            </div>
+            <div class="columns">
+              <img src="/assets/DoiTacAmNhac/dtam3.png" alt="" />
+              <img src="/assets/DoiTacAmNhac/dtam11.png" alt="" />
+            </div>
+            <div class="columns">
+              <img src="/assets/DoiTacAmNhac/dtam4.png" alt="" />
+              <img src="/assets/DoiTacAmNhac/dtam12.png" alt="" />
+            </div>
+            <div class="columns">
+              <img src="/assets/DoiTacAmNhac/dtam5.png" alt="" />
+              <img src="/assets/DoiTacAmNhac/dtam13.png" alt="" />
+            </div>
+            <div class="columns">
+              <img src="/assets/DoiTacAmNhac/dtam6.png" alt="" />
+              <img src="/assets/DoiTacAmNhac/dtam14.png" alt="" />
+            </div>
+            <div class="columns">
+              <img src="/assets/DoiTacAmNhac/dtam7.png" alt="" />
+              <img src="/assets/DoiTacAmNhac/dtam15.png" alt="" />
+            </div>
+            <div class="columns">
+              <img src="/assets/DoiTacAmNhac/dtam8.png" alt="" />
+              <img src="/assets/DoiTacAmNhac/dtam16.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

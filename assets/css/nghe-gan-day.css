@@ -1,0 +1,76 @@
+.nghe-gan-day{
+    /* background-color: beige; */
+   
+    
+}
+
+.content-wrapper{
+    display: flex;
+    width: 100%;
+}
+
+
+.nghe-gan-day .content-wrapper__card{
+    width: calc(100% / 7);
+    height: auto;
+    overflow: hidden;
+    float: left;
+    margin: 0 1rem;
+}
+
+.co-the-ban-muon-nghe .content-wrapper__card{
+    width: calc(100% / 5);
+    height: auto;
+    overflow: hidden;
+    float: left;
+    margin: 0 1rem;
+}
+
+.content-wrapper__card--item img{
+    
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.6s;
+    
+}
+
+.content-wrapper__card--item{ 
+    width: 100%;
+    
+    
+    
+}
+
+
+.content-wrapper__card--item:hover img{
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.content-wrapper__card--content{
+    padding: 1rem 0;
+}
+
+.title-container__show-all:hover,
+.content-wrapper__card--content:hover{
+    color: var(--link-text-hover);
+    cursor: pointer;
+}
+
+.sub-content-img a{
+    font-size: var(--font-size);
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.33;
+}
+
+.sub-content-img a:hover{
+  
+    text-decoration: underline;
+    color: var(--link-text-hover);
+
+    
+
+}
