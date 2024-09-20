@@ -6,7 +6,7 @@ $(document).ready(function () {
   let nextMusic = $("#next-music"); // Sử dụng # cho ID
   let backward = $("#backward"); // Sử dụng # cho ID
   let stop = $("#stop"); // Sử dụng # cho ID
-  const url_music = "./assets/music/name-music";
+  const url_music = "./assets/music";
   var ind_music = 0;
   var currentFilePath = null;
   var audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -70,7 +70,7 @@ $(document).ready(function () {
               <div class="img-block block-relative box">
                 <img
                   class="img"
-                  src="./assets/music/img-author/img.jpg"
+                  src="./assets/music/img.jpg"
                   alt=""
                 />
   
@@ -89,7 +89,7 @@ $(document).ready(function () {
               <div class="img-block block-relative box">
                 <img
                   class="img"
-                  src="./assets/music/img-author/img.jpg"
+                  src="./assets/music/img.jpg"
                   alt=""
                 />
   
@@ -108,7 +108,7 @@ $(document).ready(function () {
               <div class="img-block block-relative box">
                 <img
                   class="img"
-                  src="./assets/music/img-author/img.jpg"
+                  src="./assets/music/img.jpg"
                   alt=""
                 />
   
@@ -127,7 +127,7 @@ $(document).ready(function () {
               <div class="img-block block-relative box">
                 <img
                   class="img"
-                  src="./assets/music/img-author/img.jpg"
+                  src="./assets/music/img.jpg"
                   alt=""
                 />
   
@@ -410,6 +410,9 @@ $(document).ready(function () {
       let ind = 0;
       let src_img;
       for (const file of files) {
+        if(!file.includes(".mp3")){
+          continue;
+        }
         src_img = file.replace(".mp3", ".jpg");
         let arr_file = file.split(".");
 
@@ -425,13 +428,14 @@ $(document).ready(function () {
           author: author,
           name: file.split(".")[0].split("-")[0],
           path: path,
-          img: "./assets/music/img-music/" + src_img,
+          img: "./assets/music/" + src_img,
           duration: formatTime(duration),
         };
         ind++;
       }
 
-      // console.log(songs);
+      console.log("songs");
+      console.log(songs);
       return songs;
     } catch (error) {
       console.error("Error getting files:", error);
@@ -1054,7 +1058,7 @@ $(document).ready(function () {
     $(".title__content").on("click", function () {
       let path = $(this).attr("data-src");
 
-      NAME_MUSIC.text("ds");
+      // NAME_MUSIC.text("ds");
       $("#iframe-container-main").on("load", function () {
         let iframeContent = $(this).contents();
         let imgMusic = iframeContent.find("#name-music");

@@ -28,7 +28,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./assets/js/music.js"></script>
+    <script src="./assets/js/js_main.js"></script>
     <title>Zing MP3 Clone</title>
   </head>
   <body>
@@ -71,7 +71,7 @@
                     <div class="img-block block-relative box">
                       <img
                         class="img"
-                        src="./assets/music/img-author/img.jpg"
+                        src="./assets/music/img.jpg"
                         alt=""
                       />
 
@@ -90,7 +90,7 @@
                     <div class="img-block block-relative box">
                       <img
                         class="img"
-                        src="./assets/music/img-author/img.jpg"
+                        src="./assets/music/img.jpg"
                         alt=""
                       />
 
@@ -109,7 +109,7 @@
                     <div class="img-block block-relative box">
                       <img
                         class="img"
-                        src="./assets/music/img-author/img.jpg"
+                        src="./assets/music/img.jpg"
                         alt=""
                       />
 
@@ -128,7 +128,7 @@
                     <div class="img-block block-relative box">
                       <img
                         class="img"
-                        src="./assets/music/img-author/img.jpg"
+                        src="./assets/music/img.jpg"
                         alt=""
                       />
 
@@ -707,7 +707,7 @@
             </div>
           </div>
 
-          <div id="content-container">
+          <div id="content-container" >
             <iframe
               src="playList.html"
               class="iframe-container"
@@ -723,7 +723,8 @@
               </div>
               <div class="content">
                 <div class="content-name">
-                  <div id="name-music" class="name-music"></div>
+                  <marquee direction="left" scrolldelay = "150" id="name-music" class="name-music"></marquee>
+                  <!-- <div id="name-music" class="name-music"></div> -->
                 </div>
 
                 <div id="author" class="author"></div>

@@ -246,13 +246,25 @@ a {
 
 .content-music .name-music {
   width: 200px;
-  animation: scroll-left 10s linear infinite;
+  /* animation: scroll-left 10s linear infinite; */
   font-size: calc(var(--font-size));
+  /* animation: marquee 10s linear infinite; */
   color: var(--while-color);
   font-weight: 500;
   padding: 2px;
   line-height: 1.36;
   cursor: pointer;
+
+
+}
+
+@keyframes marquee {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
 }
 @keyframes scroll-left {
   0% {
@@ -294,13 +306,18 @@ a {
   overflow: overlay;
 }
 .custom-scroll::-webkit-scrollbar {
+  width: 3px;
+}
+.scroll-main.custom-scroll::-webkit-scrollbar {
   width: 5px;
 }
 
 .custom-scroll::-webkit-scrollbar-thumb {
   background: var(--layout-nav-bg);
+  background-color: var(--background-menu-left-active);
+  /* background-color: #c86dd7; */
   /* background: var(--scroll-thumb-bg); */
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 .custom-scroll::-webkit-scrollbar-thumb:active {
@@ -1047,7 +1064,10 @@ horizontal .content {
   width: 100%;
   /* background-color: var(--background-menu-left-active); */
   background: var(--while-color);
+
   height: 4px;
+  margin: auto;
+  overflow: hidden;
   cursor: pointer;
   position: relative;
   border-radius: 10px;
@@ -1063,6 +1083,7 @@ horizontal .content {
   height: 3px;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
   border-radius: 10px;
   z-index: 1;
   /* -webkit-appearance: none; */
@@ -1072,6 +1093,7 @@ horizontal .content {
 #volume-control:hover,
 #range-time:hover {
   padding: 1px 0;
+  overflow: unset;
 }
 #volume-control::-webkit-slider-thumb,
 #range-time::-webkit-slider-thumb {
