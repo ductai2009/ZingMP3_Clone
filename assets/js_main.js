@@ -6,7 +6,9 @@ $(document).ready(function () {
   let nextMusic = $("#next-music"); // Sử dụng # cho ID
   let backward = $("#backward"); // Sử dụng # cho ID
   let stop = $("#stop"); // Sử dụng # cho ID
-  const url_music = "./assets/music";
+  // const url_music = "./assets/music";
+  const url_music = " https://ductai2009.github.io/ZingMP3_Clone/assets/music";
+ 
   var ind_music = 0;
   var currentFilePath = null;
   var audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -428,7 +430,7 @@ $(document).ready(function () {
           author: author,
           name: file.split(".")[0].split("-")[0],
           path: path,
-          img: "./assets/music/" + src_img,
+          img: url_music + src_img,
           duration: formatTime(duration),
         };
         ind++;
