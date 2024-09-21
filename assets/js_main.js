@@ -7,7 +7,7 @@ $(document).ready(function () {
   let backward = $("#backward"); // Sử dụng # cho ID
   let stop = $("#stop"); // Sử dụng # cho ID
   // const url_music = "./assets/music";
-  const url_music = " https://ductai2009.github.io/ZingMP3_Clone/assets/music";
+  const url_music = "https://ductai2009.github.io/ZingMP3_Clone/assets/music";
  
   var ind_music = 0;
   var currentFilePath = null;
@@ -28,6 +28,16 @@ $(document).ready(function () {
   // var name = "";
   // var author = "";
   // var src_img = "";
+
+  const musicFiles = [
+    "1_Phút_-_Andiez.mp3",
+    "2T_LIỆU_GIỜ_-_Venn_(_Prod_KayT_).mp3",
+    "Chẳng_Thể_Tìm_Được_Em_-_PhucXp_ft._Freak_D.mp3",
+    "Âm_Thầm_Bên_Em_(Lofi_Ver._By_Besu)_-_Sơn_Tùng_MTP.mp3",
+    "Đánh_Mất_Em_(Lofi_Ver)_-_Quang_Đăng_Trần_x_Freak_D.mp3"
+  ];
+
+
   gainNode.gain.value = 0.5;
   window.hoverCard = function () {
     $(".hover-tooltip").hover(
@@ -405,16 +415,17 @@ $(document).ready(function () {
     });
   }
 
-  async function loadFiles(url) {
+
+
+async function loadFiles(url) {
     try {
-      const files = await getFilesFromDirectory(url);
-      // const songs = {};
+      let songs = {};
       let ind = 0;
       let src_img;
-      for (const file of files) {
-        if(!file.includes(".mp3")){
-          continue;
-        }
+
+      for (const file of musicFiles) {
+        if(!file.includes(".mp3")) continue;
+
         src_img = file.replace(".mp3", ".jpg");
         let arr_file = file.split(".");
 
@@ -423,26 +434,26 @@ $(document).ready(function () {
         let author = name_author[name_author.length - 1];
         let path = url + "/" + file;
 
-        let duration = await getAudioDuration(path); // Đợi cho đến khi duration được lấy
+        let duration = await getAudioDuration(path); // Đợi lấy duration
 
         songs[ind] = {
           stt: ind,
           author: author,
-          name: file.split(".")[0].split("-")[0],
+          name: name,
           path: path,
-          img: url_music + src_img,
+          img: url + "/" + src_img,
           duration: formatTime(duration),
         };
         ind++;
       }
 
-      console.log("songs");
-      console.log(songs);
+      console.log("songs:", songs);
       return songs;
     } catch (error) {
       console.error("Error getting files:", error);
     }
-  }
+}
+
 
   function getAudioDuration(path) {
     return new Promise((resolve) => {
