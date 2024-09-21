@@ -6,8 +6,8 @@ $(document).ready(function () {
   let nextMusic = $("#next-music"); // Sử dụng # cho ID
   let backward = $("#backward"); // Sử dụng # cho ID
   let stop = $("#stop"); // Sử dụng # cho ID
-  // const url_music = "./assets/music";
-  const url_music = "https://ductai2009.github.io/ZingMP3_Clone/assets/music";
+  const url_music = "./assets/music";
+  // const url_music = "https://ductai2009.github.io/ZingMP3_Clone/assets/music";
  
   var ind_music = 0;
   var currentFilePath = null;
@@ -29,13 +29,109 @@ $(document).ready(function () {
   // var author = "";
   // var src_img = "";
 
+  // const musicFiles = [
+  //   "1_Phút_-_Andiez.mp3",
+  //   "2T_LIỆU_GIỜ_-_Venn_(_Prod_KayT_).mp3",
+  //   "Chẳng_Thể_Tìm_Được_Em_-_PhucXp_ft._Freak_D.mp3",
+  //   "Âm_Thầm_Bên_Em_(Lofi_Ver._By_Besu)_-_Sơn_Tùng_MTP.mp3",
+  //   "Đánh_Mất_Em_(Lofi_Ver)_-_Quang_Đăng_Trần_x_Freak_D.mp3"
+  // ];
+
+
   const musicFiles = [
-    "1_Phút_-_Andiez.mp3",
-    "2T_LIỆU_GIỜ_-_Venn_(_Prod_KayT_).mp3",
-    "Chẳng_Thể_Tìm_Được_Em_-_PhucXp_ft._Freak_D.mp3",
-    "Âm_Thầm_Bên_Em_(Lofi_Ver._By_Besu)_-_Sơn_Tùng_MTP.mp3",
-    "Đánh_Mất_Em_(Lofi_Ver)_-_Quang_Đăng_Trần_x_Freak_D.mp3"
-  ];
+    {
+      "name": "1 Phút",
+      "author": "Andiez",
+      "file": "1_Phút_-_Andiez.mp3",
+      "img": "1_Phút_-_Andiez.jpg"
+    },
+    {
+      "name": "2T LIỆU GIỜ",
+      "author": "Venn ( Prod KayT )",
+      "file": "2T_LIỆU_GIỜ_-_Venn_(_Prod_KayT_).mp3",
+      "img": "2T_LIỆU_GIỜ_-_Venn_(_Prod_KayT_).jpg"
+    },
+    {
+      "name": "Chẳng Thể Tìm Được Em",
+      "author": "PhucXp ft",
+      "file": "Chẳng_Thể_Tìm_Được_Em_-_PhucXp_ft._Freak_D.mp3",
+      "img": "Chẳng_Thể_Tìm_Được_Em_-_PhucXp_ft._Freak_D.jpg"
+    },
+    {
+      "name": "Hẹn Em Ở Lần Yêu Thứ 2 (Lofi Ver)",
+      "author": "Nguyenn x Đặng Tuấn Vũ x Freak D",
+      "file": "Hẹn_Em_Ở_Lần_Yêu_Thứ_2_(Lofi_Ver)_-_Nguyenn_x_Đặng_Tuấn_Vũ_x_Freak_D.mp3",
+      "img": "Hẹn_Em_Ở_Lần_Yêu_Thứ_2_(Lofi_Ver)_-_Nguyenn_x_Đặng_Tuấn_Vũ_x_Freak_D.jpg"
+    },
+    {
+      "name": "Kẻ Mộng Mơ (Lofi Ver)",
+      "author": "Reddy x Freak D",
+      "file": "Kẻ_Mộng_Mơ_(Lofi_Ver)_-_Reddy_x_Freak_D.mp3",
+      "img": "Kẻ_Mộng_Mơ_(Lofi_Ver)_-_Reddy_x_Freak_D.jpg"
+    },
+    {
+      "name": "LẠ LÙNG",
+      "author": "Vũ",
+      "file": "LẠ_LÙNG_-_Vũ.mp3",
+      "img": "LẠ_LÙNG_-_Vũ.jpg"
+    },
+    {
+      "name": "NGÀY ĐẸP TRỜI ĐỂ NÓI CHIA TAY",
+      "author": "LOU HOÀNG",
+      "file": "NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_-_LOU_HOÀNG.mp3",
+      "img": "NGÀY_ĐẸP_TRỜI_ĐỂ_NÓI_CHIA_TAY_-_LOU_HOÀNG.jpg"
+    },
+    {
+      "name": "NÃO CÁ VÀNG",
+      "author": "ONLY C ft",
+      "file": "NÃO_CÁ_VÀNG_-_ONLY_C_ft._LOU_HOÀNG.mp3",
+      "img": "NÃO_CÁ_VÀNG_-_ONLY_C_ft._LOU_HOÀNG.jpg"
+    },
+    {
+      "name": "Nơi Này Có Anh (Lofi Ver. By TUYENVU)",
+      "author": "Sơn Tùng MTP",
+      "file": "Nơi_Này_Có_Anh_(Lofi_Ver._By_TUYENVU)_-_Sơn_Tùng_MTP.mp3",
+      "img": "Nơi_Này_Có_Anh_(Lofi_Ver._By_TUYENVU)_-_Sơn_Tùng_MTP.jpg"
+    },
+    {
+      "name": "Nắng Ấm Xa Dần (Lofi Ver. By ThanhHuy)",
+      "author": "Sơn Tùng MTP",
+      "file": "Nắng_Ấm_Xa_Dần_(Lofi_Ver._By_ThanhHuy)_-_Sơn_Tùng_MTP.mp3",
+      "img": "Nắng_Ấm_Xa_Dần_(Lofi_Ver._By_ThanhHuy)_-_Sơn_Tùng_MTP.jpg"
+    },
+    {
+      "name": "Thu Cuối",
+      "author": "Mr T x Yanbi x Hằng BingBoong",
+      "file": "Thu_Cuối_-_Mr_T_x_Yanbi_x_Hằng_BingBoong.mp3",
+      "img": "Thu_Cuối_-_Mr_T_x_Yanbi_x_Hằng_BingBoong.jpg"
+    },
+    {
+      "name": "Yêu Một Người Có Lẽ",
+      "author": "Lou Hoàng, Miu Lê",
+      "file": "Yêu_Một_Người_Có_Lẽ_-_Lou_Hoàng,_Miu_Lê.mp3",
+      "img": "Yêu_Một_Người_Có_Lẽ_-_Lou_Hoàng,_Miu_Lê.jpg"
+    },
+    {
+      "name": "Âm Thầm Bên Em (Lofi Ver. By Besu)",
+      "author": "Sơn Tùng MTP",
+      "file": "Âm_Thầm_Bên_Em_(Lofi_Ver._By_Besu)_-_Sơn_Tùng_MTP.mp3",
+      "img": "Âm_Thầm_Bên_Em_(Lofi_Ver._By_Besu)_-_Sơn_Tùng_MTP.jpg"
+    },
+    {
+      "name": "Đánh Mất Em (Lofi Ver)",
+      "author": "Quang Đăng Trần x Freak D",
+      "file": "Đánh_Mất_Em_(Lofi_Ver)_-_Quang_Đăng_Trần_x_Freak_D.mp3",
+      "img": "Đánh_Mất_Em_(Lofi_Ver)_-_Quang_Đăng_Trần_x_Freak_D.jpg"
+    },
+    {
+      "name": "Đường Một Chiều",
+      "author": "Huỳnh Tú ft",
+      "file": "Đường_Một_Chiều_-_Huỳnh_Tú_ft._Magazine.mp3",
+      "img": "Đường_Một_Chiều_-_Huỳnh_Tú_ft._Magazine.jpg"
+    }
+  ]
+  
+  
 
 
   gainNode.gain.value = 0.5;
@@ -424,15 +520,12 @@ async function loadFiles(url) {
       let src_img;
 
       for (const file of musicFiles) {
-        if(!file.includes(".mp3")) continue;
-
-        src_img = file.replace(".mp3", ".jpg");
-        let arr_file = file.split(".");
-
-        let name_author = arr_file[0].split("-");
-        let name = name_author[0];
-        let author = name_author[name_author.length - 1];
-        let path = url + "/" + file;
+        // if(!file.includes(".mp3")) continue;
+        src_img = file["img"];
+    
+        let name = file["name"];
+        let author = file["author"];
+        let path = url + "/" + file["file"];;
 
         let duration = await getAudioDuration(path); // Đợi lấy duration
 
